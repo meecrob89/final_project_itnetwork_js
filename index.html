@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs-CZ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojištění</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h2>PojištěníApp</h2>
+            <ul>
+                <div class="menu">Pojištění</div>
+                <div class="menu">O aplikaci</div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="insurance">
+            <h2>Nový pojištěnec</h2>
+            <div class="inputs">
+                <img src="images/user.png" class="img" alt="uživatel">
+                <div class="leftBox">
+                    <label class="label" for="firstName">Jméno</label><br>
+                        <input type="text" class="inputForm" id="firstName" placeholder="Jméno"><br>
+                    <label class="label" for="secondName">Příjmení</label><br>
+                        <input type="text" class="inputForm" id="secondName" placeholder="Příjmení">
+                </div>
+                <div class="rightBox">
+                    <label class="label" for="age">Věk</label><br>
+                        <input type="text" class="inputForm" id="age" placeholder="Věk"><br>
+                    <label class="label" for="phoneNumber">Telefon</label><br>
+                        <input type="text" class="inputForm" id="phoneNumber" placeholder="+420...">
+                </div>
+            </div>
+            <div class="button">
+                <button type="button" class="submit" id="submit">Uložit</button>
+            </div>
+        </form>
+        <div class="insured">
+            <h2>Pojištěnci</h2>
+            <div class="insuredsTable">
+                <table class="table">
+                    <thead>
+                        <td class="nameCell">Jméno a příjmení</td>
+                        <td>Telefon</td>
+                        <td>Věk</td>
+                    </thead>
+                    <tbody id="table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="Insured.js"></script>
+    <script src="Validator.js"></script>
+    <script src="Database.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
