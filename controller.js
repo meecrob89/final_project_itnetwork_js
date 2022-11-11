@@ -12,7 +12,7 @@ submitButton.onclick = () => {
     window.location.reload();
 }
 
-addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         validator.validate(firstNameInput.value, secondNameInput.value, phoneNumberInput.value, ageInput.value);
         window.location.reload();

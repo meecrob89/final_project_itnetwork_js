@@ -13,7 +13,7 @@ function loadNamesForTest() {
     testButton.style.borderRadius = "25px";
     testButton.style.border = "none";
     testButton.onclick = () => {
-        for (i = 0; i < 6; i++) {
+        for (i = 0; i < 7; i++) {
             firstNameInput.value = jmena[i];
             secondNameInput.value = prijmeni[i];
             ageInput.value = roky[i];

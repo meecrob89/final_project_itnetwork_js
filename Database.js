@@ -80,7 +80,6 @@ class Database {
             tdName.textContent = insuredFromStorage.name;
             tdAge.textContent = insuredFromStorage.age;
             tdPhoneNumber.textContent = insuredFromStorage.phoneNumber;
-            removeButton.textContent = "odebrat";
 
             removeButton.onclick = () => {
                 document.getElementById("row" + removeButton.id).remove();
@@ -94,6 +93,8 @@ class Database {
                 for (i = 0; i < buttons.length; i++) {
                     buttons[i].id = i + 1;
                     rows[i].id = "row" + (i + 1);
+                    console.log("vygenerováno id pro button: " + buttons[i].id);
+                    console.log("vygenerováno id pro řádek: " + rows[i].id);
                 }
             }
     
