@@ -53,7 +53,7 @@ class Database {
             tdRemove.appendChild(removeButton);
             tr.appendChild(tdRemove);
 
-            window.location.reload();
+            
         }
     }
 

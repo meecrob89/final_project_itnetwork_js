@@ -9,10 +9,12 @@ let validator = new Validator();
 
 submitButton.onclick = () => {
     validator.validate(firstNameInput.value, secondNameInput.value, phoneNumberInput.value, ageInput.value);
+    window.location.reload();
 }
 
 addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         validator.validate(firstNameInput.value, secondNameInput.value, phoneNumberInput.value, ageInput.value);
+        window.location.reload();
     }
 });
