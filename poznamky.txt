@@ -1,0 +1,13 @@
+upravit getInsuredsFromStorage aby přidávala pouze posledního pojištěnce
+získat si form a funkci dat do onsubmit
+form.onsubmit = (e) => {
+    e.preventDefault();
+    validator.validate(firstNameInput.value, secondNameInput.value, phoneNumberInput.value, ageInput.value);
+}
+button musí mít typ submit
+
+zaměnit localStorage za databázi
+eliminovat odskoky tabulky při přidání nového pojištěnce
+rozlišit barevně jednotlivé řádky (pruhovaná tabulka)
+responzivita
+vysvětlivky pro tel kontakt
