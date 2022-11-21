@@ -12,7 +12,7 @@ class Validator {
             justNumbers.test(phoneNumberFromInput) &&
             (ageFromInput > 0) && (ageFromInput < 110)
             ) {
-            database.makeNewInsured(firstNameInput, secondNameInput, ageInput, phoneNumberInput);
+            database.makeNewInsured(firstNameInput.value, secondNameInput.value, ageInput.value, phoneNumberInput.value);
         } else if (
             (!justLatters.test(firstNameFromInput) ||
             (!justLatters.test(secondNameFromInput))

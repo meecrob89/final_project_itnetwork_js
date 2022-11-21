@@ -30,27 +30,30 @@ class Database {
         removeButton.className = "removeButton";
         removeButton.src = "images/remove.png";
 
-        
-        let insuredFromStorage = this.insureds[this.insureds.length];
+        for (let i = 0; i < this.insureds.length; i++) {
+            let insuredFromStorage = this.insureds[i];
 
-        tdName.textContent = insuredFromStorage.name;
-        tdAge.textContent = insuredFromStorage.age;
-        tdPhoneNumber.textContent = insuredFromStorage.phoneNumber;
+            tdName.textContent = insuredFromStorage.name;
+            tdAge.textContent = insuredFromStorage.age;
+            tdPhoneNumber.textContent = insuredFromStorage.phoneNumber;
 
-        tr.appendChild(tdName);
-        tr.appendChild(tdPhoneNumber);
-        tr.appendChild(tdAge);
-        tdRemove.appendChild(removeButton);
-        tr.appendChild(tdRemove);
+            removeButton.id = i + 1;
+            tr.id = "row" + removeButton.id;
 
-        removeButton.id = this.insureds.length + 1;
-        tr.id = "row" + removeButton.id;
+            removeButton.onclick = () => {
+                document.getElementById("row" + removeButton.id).remove();
+                let localStorageRemovingItem = JSON.parse((localStorage.getItem("insuredsInStorage")));
+                localStorageRemovingItem.splice(removeButton.id - 1, 1);
+                localStorage.setItem("insuredsInStorage", JSON.stringify(localStorageRemovingItem));
+            }
+    
+            tr.appendChild(tdName);
+            tr.appendChild(tdPhoneNumber);
+            tr.appendChild(tdAge);
+            tdRemove.appendChild(removeButton);
+            tr.appendChild(tdRemove);
 
-        removeButton.onclick = () => {
-            document.getElementById("row" + removeButton.id).remove();
-            let localStorageRemovingItem = JSON.parse((localStorage.getItem("insuredsInStorage")));
-            localStorageRemovingItem.splice(removeButton.id - 1, 1);
-            localStorage.setItem("insuredsInStorage", JSON.stringify(localStorageRemovingItem));
+            
         }
     }
 
@@ -58,8 +61,8 @@ class Database {
         for (let i = 0; i < this.insureds.length; i++) {
             let insuredFromStorage = this.insureds[i];
             let tr = document.createElement("tr");
-            tr.className = "rows";
-            table.appendChild(tr);
+            tr.className = "rows"
+            table.appendChild(tr)
 
             let tdName = document.createElement("td");
             let tdAge = document.createElement("td");
@@ -78,12 +81,6 @@ class Database {
             tdAge.textContent = insuredFromStorage.age;
             tdPhoneNumber.textContent = insuredFromStorage.phoneNumber;
 
-            tr.appendChild(tdName);
-            tr.appendChild(tdPhoneNumber);
-            tr.appendChild(tdAge);
-            tdRemove.appendChild(removeButton);
-            tr.appendChild(tdRemove);
-
             removeButton.onclick = () => {
                 document.getElementById("row" + removeButton.id).remove();
                 let localStorageBeforeRemoveItem = JSON.parse((localStorage.getItem("insuredsInStorage")));
@@ -98,6 +95,12 @@ class Database {
                     rows[i].id = "row" + (i + 1);
                 }
             }
+    
+            tr.appendChild(tdName);
+            tr.appendChild(tdPhoneNumber);
+            tr.appendChild(tdAge);
+            tdRemove.appendChild(removeButton);
+            tr.appendChild(tdRemove);
         }
     }
 }
