@@ -142,3 +142,86 @@ td {
 .insured {
     margin-top: 20px;
 }
+
+@media screen and (max-device-width: 600px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .navbar {
+        width: 100%;
+    }
+
+    .menu {
+        margin-left: 0;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .navbar > h2 {
+        margin-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    .navbar > ul {
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-left: 15px;
+        display: inline-block;
+    }
+
+    .insurance > h2 {
+        margin-left: 10px;
+    }
+
+    ul > li {
+        margin-left: 20px;
+    }
+
+    .leftbox {
+        margin-top: 10px;
+    }
+
+    .rightbox {
+        margin-top: 10px;
+    }
+
+    .button {
+        margin-top: 5px;
+    }
+
+    .insured {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .insured > h2 {
+        margin-left: 0;
+    }
+
+    table {
+        font-size: 0.6em;
+    }
+
+    .removeButton {
+        width: 20px;
+        height: 20px;
+    }
+}
